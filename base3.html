@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type = text/javascript>
+<!--  基本数据类型保存到stack内存中 对象保存到heap内存中-->
+var a = 123;
+var b = a;
+var obj1 = new Object();
+var c = 123;
+console.log(c == a);
+obj1.name = "沙和尚";
+console.log(obj1);
+// 使用对象字面量创建对象
+var obj = {name: "Pig", age:23, gender:"male", test:{name:"T"}};
+
+console.log(obj);
+
+// 创建一个函数对象
+var fun = new Function("console.log('Hello world')");
+console.log(typeof fun);
+fun(); // 函数中封装的代码会按顺序执行
+</script>
+
+</body>
+</html>

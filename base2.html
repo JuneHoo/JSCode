@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+// JavaScript由于采用原型继承，我们无法直接扩展一个Class，因为根本不存在Class这种类型。
+/**JavaScript的原型继承实现方式就是：
+
+    定义新的构造函数，并在内部用call()调用希望“继承”的构造函数，并绑定this；
+
+    借助中间函数F实现原型链继承，最好通过封装的inherits函数完成；
+
+    继续在新的构造函数的原型上定义新方法。
+**/
+function Student(props) {
+  this.name = props.name || "Unnamed";
+}
+
+// Student.prototype.hello() = function () {
+//   alert('Hello, ' + this.name + '!');
+// };
+
+function PrimaryStudent(props) {
+  Student.call(this.props);
+  this.grade = props.grade || 1;
+}
+
+var obj = new Object();
+
+
+</script>
+</body>
+</html>
